@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "cover": "https://i.ibb.co.com/d4ZyxLGt/cover.jpg",
+    "author": "John Doe",
+    "title": "Getting Started with React",
+    "author_img": "https://i.ibb.co.com/ZRdKpw3z/avater-1.jpg",
+    "posted_date": "2025-08-10",
+    "reading_time": 5,
+    "hashtags": ["#react", "#javascript", "#frontend"]
+  },
+  {
+    "id": 2,
+    "cover": "https://i.ibb.co.com/KpNFhs54/cover.jpg",
+    "author": "Jane Smith",
+    "title": "Understanding useState and useEffect",
+    "author_img": "https://i.ibb.co.com/v6CLzM6L/avater-2.jpg",
+    "posted_date": "2025-08-15",
+    "reading_time": 7,
+    "hashtags": ["#hooks", "#react", "#webdev"]
+  },
+  {
+    "id": 3,
+    "cover": "https://i.ibb.co.com/s9d1vycG/cover.jpg",
+    "author": "Michael Lee",
+    "title": "Mastering Props in React",
+    "author_img": "https://i.ibb.co.com/KjXqGs14/avater-3.jpg",
+    "posted_date": "2025-08-20",
+    "reading_time": 6,
+    "hashtags": ["#props", "#react", "#beginners"]
+  }
+]

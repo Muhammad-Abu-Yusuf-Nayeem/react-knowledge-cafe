@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+import { FaBeer } from "react-icons/fa";
+import { IoBookmarksOutline } from "react-icons/io5";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleAddToBookmark }) => {
   const {
     id,
     title,
@@ -12,10 +14,14 @@ const Blog = ({ blog }) => {
     cover,
   } = blog;
   return (
-    <div className="" key={id}>
-      <img src={cover} alt={`Cover picture of the title ${title}`} />
+    <div className="mb-20" key={id}>
+      <img
+        src={cover}
+        className="w-full mb-8"
+        alt={`Cover picture of the title ${title}`}
+      />
       <div className="flex justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center mb-4">
           <img src={author_img} alt="" className="w-14 rounded-full" />
           <div className="ml-4">
             <h3 className="text-xl ">{author}</h3>
@@ -24,10 +30,19 @@ const Blog = ({ blog }) => {
         </div>
         <div>
           <span>{reading_time} min read</span>
+          <button onClick={() => handleAddToBookmark(blog)}
+            className="ml-4 p-2 border rounded-full" ><IoBookmarksOutline />{" "}
+          </button>
         </div>
       </div>
       <p className="text-2xl">{title}</p>
-          <p>{hashtags.map((hash,idx,) => <span key={idx}><a href="">{ hash}  </a></span>)}</p>
+      <p>
+        {hashtags.map((hash, idx) => (
+          <span key={idx}>
+            <a href="">{hash} </a>
+          </span>
+        ))}
+      </p>
     </div>
   );
 };

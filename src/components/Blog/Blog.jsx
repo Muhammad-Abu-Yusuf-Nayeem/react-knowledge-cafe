@@ -17,12 +17,12 @@ const Blog = ({ blog, handleAddToBookmark }) => {
     <div className="mb-20" key={id}>
       <img
         src={cover}
-        className="w-full mb-8"
+        className="w-full mb-8 h-[400px] object-cover rounded-lg"
         alt={`Cover picture of the title ${title}`}
       />
       <div className="flex justify-between">
         <div className="flex items-center mb-4">
-          <img src={author_img} alt="" className="w-14 rounded-full" />
+          <img src={author_img} alt="" className="w-14  rounded-full" />
           <div className="ml-4">
             <h3 className="text-xl ">{author}</h3>
             <p>{posted_date}</p>
@@ -30,8 +30,11 @@ const Blog = ({ blog, handleAddToBookmark }) => {
         </div>
         <div>
           <span>{reading_time} min read</span>
-          <button onClick={() => handleAddToBookmark(blog)}
-            className="ml-4 p-2 border rounded-full" ><IoBookmarksOutline />{" "}
+          <button
+            onClick={() => handleAddToBookmark(blog)}
+            className="ml-4 p-2 border rounded-full"
+          >
+            <IoBookmarksOutline />{" "}
           </button>
         </div>
       </div>

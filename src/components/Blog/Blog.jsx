@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FaBeer } from "react-icons/fa";
 import { IoBookmarksOutline } from "react-icons/io5";
 
-const Blog = ({ blog, handleAddToBookmark }) => {
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
   const {
     id,
     title,
@@ -14,7 +14,7 @@ const Blog = ({ blog, handleAddToBookmark }) => {
     cover,
   } = blog;
   return (
-    <div className="mb-20" key={id}>
+    <div className="mb-20 space-y-4" key={id}>
       <img
         src={cover}
         className="w-full mb-8 h-[400px] object-cover rounded-lg"
@@ -46,6 +46,12 @@ const Blog = ({ blog, handleAddToBookmark }) => {
           </span>
         ))}
       </p>
+      <button
+        className="text-purple-600 font-bold"
+        onClick={() => handleMarkAsRead(reading_time)}
+      >
+        Mark As Read
+      </button>
     </div>
   );
 };
